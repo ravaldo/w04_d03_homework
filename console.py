@@ -16,7 +16,7 @@ author_repository.save(author2)
 author_repository.save(author3)
 author1.first_name = "J.R.R."
 author_repository.update(author1)
-author_repository.delete(author3.id)
+#author_repository.delete(author3.id)
 print(author_repository.select(author2.id))
 authors = author_repository.select_all()
 assert(len(authors) == 2)
@@ -41,7 +41,7 @@ book_repository.save(book_7)
 
 book_5.title = "Harry Potter and the Philosopher's Stone"
 book_repository.update(book_5)
-book_repository.delete(book_7.id)
+#book_repository.delete(book_7.id)
 books = book_repository.select_all()
 assert(len(books) == 6)
 

@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="input_forms">
+	<div class="new_author">
+		<h3>Add Author</h3>
+		<form action="/add_author" method="POST">
+			<div>
+				<label for="first_name"">First&nbsp;Name</label>
+				<input type="text" name="first_name" id="first_name">
+			</div>
+			<div>
+				<label for="last_name"">Last&nbsp;Name</label>
+				<input type="text" name="last_name" id="last_name">
+			</div>
+			<button type="submit">Add Author</button>
+		</form>
+	</div>
+	
+	<div class="new_book">
+		<h3>Add Book</h3>
+		<form action="/books" method="POST">
+			<div>
+				<label for="title"">Title</label>
+				<input type="text" name="title" id="title">
+			</div>
+			<div>
+				<label for="author"">Author</label>
+				<select id="author" name="author_id">
+					{% for author in authors %}
+					<option value="{{author.id}}">{{author.first_name}} {{author.last_name}}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div>
+				<label for="genre"">Genre</label>
+				<input type="text" name="genre" id="genre">
+			</div>
+			<div>
+				<label for="numpages"">Num&nbsp;of&nbsp;pages</label>
+				<input type="number" name="numpages" id="numpages">
+			</div>
+			<button type="submit">Add Book</button>
+		</form>
+	</div>
+	</div>
+
+{% endblock %}
