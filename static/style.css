@@ -3,8 +3,9 @@ body{
   margin: 0;
 }
 
-div.delete i {
-	color: red;
+div.icons i {
+	color:  #f78536;
+	margin-right: 10px;
 }
 
 div.book-list {
@@ -68,11 +69,11 @@ div.input_forms form div select
 
 
 nav {
-background-color: #aaa;
-height: 2.5em;
-margin: 0;
-display: flex;
-align-items: center;
+	background-color: #aaa;
+	height: 2.5em;
+	display: flex;
+	align-items: center;
+	margin: 0px 0px 50px 0px;
 }
 
 nav a, nav a:link, nav a:visited {		

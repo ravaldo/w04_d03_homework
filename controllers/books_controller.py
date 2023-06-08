@@ -18,6 +18,7 @@ def delete_task(id):
 	book_repository.delete(id)
 	return redirect("/books")
 
+
 @books_blueprint.route("/books/new")
 def new_book():
 	authors = author_repository.select_all()
@@ -42,3 +43,9 @@ def add_author():
 	book = Book(title, author, genre, pages)
 	book_repository.save(book)
 	return redirect("/books")
+	
+	
+@books_blueprint.route("/books/<index>/edit", methods=["GET"])	
+def edit_book(index):
+	authors = author_repository.select_all()
+	return render_template("books/edit.html", authors = authors)
