@@ -1,0 +1,22 @@
+body{
+  font-family: "Helvetica", arial, sans-serif; font-size: 16px;
+}
+
+div.delete i {
+	color: red;
+}
+
+div.book-list {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	gap: 40px;
+	
+}
+
+div.book-list div.book {
+	background-color: #dff;
+	padding: 15px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
